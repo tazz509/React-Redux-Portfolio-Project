@@ -13,7 +13,7 @@ import EventCard from '../components/EventCard';
 
 const EventsList = ({ events }) => {
   
-  const eventsByDate = events.events.sort(function(a,b){
+  const eventsByDate = [].slice.call(events).sort(function(a,b){
     return a.date > b.date
   })
   const renderEvents = eventsByDate.map((event) => 
