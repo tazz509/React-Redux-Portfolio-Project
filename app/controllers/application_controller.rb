@@ -1,5 +1,5 @@
-# frozen_string_literal: true
-
-class ApplicationController < ActionController::Base
-  protect_from_forgery with: :null_session
+class ApplicationController < ActionController::API
+    def fallback_index_html
+        render :file => 'public/index.html'
+    end
 end
