@@ -29,10 +29,13 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route path="/events" component={EventsPage}/>
-            <Route exact path='/about' component={About}/>
-            <Route exact path='/contact' component={Contact}/>
+            
           </Switch>
         <Footer />
+        <Switch>
+            <Route exact path='/about' component={About}/>
+            <Route exact path='/contact' component={Contact}/>
+        </Switch>
         </div>
       </Router>
     );
