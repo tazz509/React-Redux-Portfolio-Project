@@ -1,0 +1,41 @@
+#game-board {
+  display: block;
+}
+
+.link {
+  margin-right: 3px;
+}
+
+#game-status {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#links {
+/*  margin-top: 20px;
+  text-align: center;
+*/
+  font-size: large;
+  font-weight: bold;
+  right: 50%;
+  bottom: 10%;
+  transform: translate(50%,50%);
+  position: relative;
+  padding: 2em;
+}
+
+a {
+  margin-right: 1em;
+}
+
+.game {
+  display: block;
+  padding: 1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+

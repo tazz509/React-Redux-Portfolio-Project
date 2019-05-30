@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
-  scope '/api' do
-    resources :events
-    resources :users
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  namespace :api do
+    namespace :v1, defaults: { format: :json } do
+      #resources :users, param: :name, only: [ :index, :create, :show ] do
+      #  resources :games, only: [:index, :create, :show, :update]
+      #end
+      get 'game', to: 'games#create'
+      get 'high_scores', to: 'scores#index'
+      post 'high_scores', to: 'scores#create'
+    end
   end
-
-  get '*path', to: "application#fallback_index_html", constraints: ->(request) do
-    !request.xhr? && request.format.html?
-  end
-  
 end

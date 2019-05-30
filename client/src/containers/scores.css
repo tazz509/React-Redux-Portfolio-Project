@@ -1,0 +1,33 @@
+.page {
+  font-size: large;
+  font-weight: bold;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%,50%);
+  position: absolute;
+}
+
+#lin {
+  font-size: 2em;
+  font-weight: bold;
+  right: 40%;
+  bottom: 20%;
+  transform: translate(50%,50%);
+  position: relative;
+  padding: 2em;
+}
+
+#times {
+  font-size: 2em;
+}
+
+h1 {
+  font-size: large;
+  text-align: center;
+  color: rgb(173, 0, 9);
+}
+
+#score {
+  margin-left: 1em;
+  font-size: 0.5em;
+}

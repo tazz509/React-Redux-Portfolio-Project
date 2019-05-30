@@ -1,0 +1,24 @@
+body {
+    background-image: url("http://www.ac-grenoble.fr/college/evire.annecy/local/cache-vignettes/L378xH464/GRILLE_SUDOK6103-c397c.jpg?1558548780");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#press {
+  font-size: 1.5em;
+  font-weight: bold;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%,50%);
+  position: absolute;
+}
+
+#link {
+  font-size: 2em;
+  font-weight: bold;
+  right: 50%;
+  top: 20%;
+  transform: translate(50%,50%);
+  position: absolute;
+}

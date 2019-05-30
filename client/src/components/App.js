@@ -1,45 +1,32 @@
-// dependencies
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { connect } from 'react-redux'
-import Footer from './Footer'
-//css
-import './App.css';
-// components
+import React from 'react';
+import { Provider } from 'react-redux';
+import { Router, Route, browserHistory } from 'react-router';
+import '../App.css';
+import { BrowserRouter as Switch } from 'react-router-dom';
+import About from '../containers/About';
+import Scores from '../containers/Scores';
+import Game from '../containers/Game';
+import Home from './Home.js';
+import EnterScore from '../components/Game/EnterScore.js';
 import NavBar from './NavBar';
-import Home from './Home';
-import About from './about';
-import Contact from './contact'
-//containers
-import EventsPage from '../containers/EventsPage';
-//actions
-import {getEvents} from '../actions/index'
 
-class App extends Component {
-
-  componentDidMount() {
-    this.props.getEvents();
-  }
-
-  render() {
-    return (
-      <Router>
-        <div>
-          <NavBar />
+const App = ({ store }) => {
+  return (
+    <div>
+      <Provider store={store} >
+        <Router history={browserHistory}>
+        <NavBar />
           <Switch>
-            <Route exact path="/" component={Home}/>
-            <Route path="/events" component={EventsPage}/>
-            
+          <Route exact path="/" component={ Home } />
+          <Route path="/about" component={ About } />
+          <Route path="/scores" component={ Scores } />
+          <Route path="/game" component={ Game } />
+          <Route path="/enter_score" component = { EnterScore } />
           </Switch>
-        <Footer />
-        <Switch>
-            <Route exact path='/about' component={About}/>
-            <Route exact path='/contact' component={Contact}/>
-        </Switch>
-        </div>
-      </Router>
-    );
-  }
+        </Router>
+      </Provider>
+    </div>
+  );
 }
 
-export default connect(null, {getEvents})(App);
+export default App;

@@ -1,0 +1,28 @@
+.page {
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+  position: absolute;
+}
+
+.page h1 {
+  font-size: 2em;
+  color: rgb(107, 10, 26);
+}
+
+.page p {
+  font-size: 1em;
+}
+
+li {
+  text-align: left;
+}
+
+#lin {
+  font-size: 2em;
+  font-weight: bold;
+  right: 40%;
+  bottom: 20%;
+  position: absolute;
+  padding: 2em;
+}

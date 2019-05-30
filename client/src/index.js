@@ -1,24 +1,15 @@
-//dependencies
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-
-//css
 import './index.css';
-
-//store
-import store from './store';
-
-//components
 import App from './components/App';
-import registerServiceWorker from './registerServiceWorker';
+import { createStore, applyMiddleware } from 'redux';
+import rootReducer from './reducers/index';
+import thunk from 'redux-thunk';
 
-
+let initial = { high_scores: [], board: {current_board: [], start_board: [], solution_board: [], start_time: null, solved: false} }
+let store = createStore(rootReducer, initial, applyMiddleware(thunk));
 
 ReactDOM.render(
-    <Provider store={store}>
-      <App />
-    </Provider>,
-  document.getElementById('root'));
-  
-  registerServiceWorker();
+  <App store={store}/>,
+  document.getElementById('root')
+);
