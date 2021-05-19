@@ -8,7 +8,7 @@ gem 'rails', '~> 5.1.6'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 4.3'
 # Add active model serializers
 gem 'active_model_serializers'
 # Install actionpack for testing purposes
